@@ -1,0 +1,67 @@
+@import 'tailwindcss' source(none);
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import 'tw-animate-css';
+
+@layer components {
+
+    /* Glassmorphism Classes */
+    .glass-panel,
+    .glass-card,
+    .glass-navbar {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .glass-button {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .glass-button:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+    }
+
+    .glass-input {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .glass-input:focus {
+        border-color: rgba(34, 197, 94, 0.5);
+        box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+        outline: none;
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Animated Gradient Background */
+    .bg-animated-gradient {
+        background: linear-gradient(-45deg, #0f172a, #020617, #0f766e, #064e3b);
+        background-size: 400% 400%;
+        animation: gradientGlow 20s ease infinite;
+    }
+}
+
+@keyframes gradientGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
